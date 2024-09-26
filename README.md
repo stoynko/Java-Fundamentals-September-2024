@@ -14,3 +14,8 @@
    * scissors
 
    The computer then chooses a random option, and the outcome is revealed.
+
+   <h3>2. "Guess the number" game </h3>
+   
+   The computer chooses a random number between 1 and 100. The player is prompted to input a number that he believes is selected by the computer.
+   A relevat message is displayed if the player chose a number lower than the one selected by the computer, a higher one or the exact one
