@@ -15,7 +15,6 @@ public class AE02_PascalTriangle {
 
         int rowsCount = Integer.parseInt(scanner.nextLine());
         int[] previousRow = new int[]{1};
-
         System.out.println(previousRow[0]);
 
         for (int row = 2; row <= rowsCount; row++) {
@@ -23,17 +22,13 @@ public class AE02_PascalTriangle {
             int[] currentRow = new int[row];
             currentRow[0] = 1;
             currentRow[row - 1] = 1;
-
             for (int element = 1; element < row - 1; element++) {
-
                 currentRow[element] = previousRow[element - 1] + previousRow[element];
             }
-
             for (int index = 0; index < row; index++) {
                 System.out.print(currentRow[index] + " ");
             }
             System.out.println();
-
             previousRow = currentRow;
         }
     }

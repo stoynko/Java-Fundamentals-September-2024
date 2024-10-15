@@ -6,12 +6,13 @@ public class E06_TriplesOfLatinCharacters {
 
     public static void main(String[] args) {
 
+        //Write a program to read an integer n and print all triples of the first n small Latin letters, ordered alphabetically.
+
         Scanner scanner = new Scanner(System.in);
         byte n = Byte.parseByte(scanner.nextLine());
         byte start = 97;
         byte end = 122;
         byte range = (byte) (start + n);
-
 
         for (int i = start; i < range; i++) {
             char charOne = (char) i;

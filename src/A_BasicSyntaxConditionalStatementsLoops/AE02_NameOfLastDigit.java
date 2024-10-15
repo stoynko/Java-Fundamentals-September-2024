@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class AE02_NameOfLastDigit {
     public static void main(String[] args) {
 
+        /*Write a method that returns the English name of the last digit of a given number.
+        Write a program that reads an integer and prints the returned value from this method.*/
+
         Scanner scanner = new Scanner(System.in);
 
         int number = Integer.parseInt(scanner.nextLine());

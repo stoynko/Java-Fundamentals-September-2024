@@ -6,21 +6,22 @@ public class L10_SpecialNumbers {
 
     public static void main(String[] args) {
 
+        /*A number is special when its sum of digits is 5, 7, or 11.
+        Write a program to read an integer n and for all numbers in the range 1…n to print the number and if it is special or not (True / False).*/
+
         Scanner scanner = new Scanner(System.in);
+        int range = Integer.parseInt(scanner.nextLine());
 
-        int n = Integer.parseInt(scanner.nextLine());
+        for (int currentNumber = 1; currentNumber <= range; currentNumber++) {
 
-        for (int i = 1; i <= n; i++) {
-
-            int number = i;
-            int secondDigit = number % 10;
-            int firstDigit = number / 10;
+            int secondDigit = currentNumber % 10;
+            int firstDigit = currentNumber / 10;
             int sum = firstDigit + secondDigit;
 
             if (sum == 5 || sum == 7 || sum == 11) {
-                System.out.printf("%d -> True%n", number);
+                System.out.printf("%d -> True%n", currentNumber);
             } else {
-                System.out.printf("%d -> False%n", number);
+                System.out.printf("%d -> False%n", currentNumber);
             }
         }
     }

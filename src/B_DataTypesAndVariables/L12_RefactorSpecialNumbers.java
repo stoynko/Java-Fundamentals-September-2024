@@ -6,6 +6,10 @@ public class L12_RefactorSpecialNumbers {
 
     public static void main(String[] args) {
 
+        /*You are given a code that is a similar to the solution to Problem 10 - Special Numbers.
+        However, the variables are improperly named, declared before they are needed, and some of them are used for multiple things.
+        Without using your previous solution, modify the code so that it is easy to read and understand.*/
+
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());

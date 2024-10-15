@@ -4,6 +4,24 @@ import java.util.Scanner;
 
 public class L05_MonthPrinter {
     public static void main(String[] args) {
+
+        /*Write a program that:
+            •	Reads an integer from the console
+            •	Print the corresponding month:
+                o	1 -> "January"
+                o	2 -> "February"
+                o	3 -> "March"
+                o	4 -> "April"
+                o	5 -> "May"
+                o	6 -> "June"
+                o	7 -> "July"
+                o	8 -> "August"
+                o	9 -> "September"
+                o	10 -> "October"
+                o	11 -> "November"
+                o	12 -> "December"
+        Print "Error!", if the number is more than 12 or less than 1*/
+
         Scanner scanner = new Scanner(System.in);
         int digit = Integer.parseInt(scanner.nextLine());
 

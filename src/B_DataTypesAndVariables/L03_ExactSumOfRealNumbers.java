@@ -8,6 +8,8 @@ public class L03_ExactSumOfRealNumbers {
 
     public static void main(String[] args) {
 
+        //Write a program to enter n numbers and calculate and print their exact sum (without rounding).
+
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());

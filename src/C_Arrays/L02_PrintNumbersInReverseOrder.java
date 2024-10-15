@@ -6,6 +6,8 @@ public class L02_PrintNumbersInReverseOrder {
 
     public static void main(String[] args) {
 
+        //Read n numbers and print them in reverse order.
+        
         Scanner scanner = new Scanner(System.in);
 
         int input = Integer.parseInt(scanner.nextLine());

@@ -1,6 +1,5 @@
 package C_Arrays;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -12,23 +11,17 @@ public class L06_EqualArrays {
         boolean isIdentical = false;
         int sum = 0;
         int indexBreakage = 0;
-        int[] arrayA = Arrays.stream(scanner.nextLine()
-                        .split(" "))
-                        .mapToInt(Integer::parseInt)
-                         .toArray();
-        int[] arrayB = Arrays.stream(scanner.nextLine()
-                        .split(" "))
-                        .mapToInt(Integer::parseInt)
-                        .toArray();
+        int[] arrayA = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] arrayB = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-        for (int index = 0; index < arrayA.length; index++) {
+        for (int currentIndex = 0; currentIndex < arrayA.length; currentIndex++) {
 
-            if (arrayA[index] == arrayB[index]) {
+            if (arrayA[currentIndex] == arrayB[currentIndex]) {
                 isIdentical = true;
-                sum += arrayA[index];
+                sum += arrayA[currentIndex];
             } else {
                 isIdentical = false;
-                indexBreakage = index;
+                indexBreakage = currentIndex;
                 break;
             }
         }

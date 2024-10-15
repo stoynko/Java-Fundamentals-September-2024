@@ -7,6 +7,9 @@ public class L04_ReverseAnArrayOfStrings {
 
     public static void main(String[] args) {
 
+        /*Write a program to read an array of strings, reverse it and print its elements. The input consists of a sequence of space-separated strings.
+        Print the output on a single line (space separated).*/
+
         Scanner scanner = new Scanner(System.in);
 
         String[] input = scanner.nextLine().split(" ");

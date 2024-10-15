@@ -5,6 +5,13 @@ import java.util.Scanner;
 public class E11_RageExpenses {
     public static void main(String[] args) {
 
+      /*As a MOBA challenger player, Peter has the bad habit of trashing his PC when he loses a game and rage quits.
+        His gaming setup consists of a headset, mouse, keyboard, and display. You will receive Peter's lost games count.
+        Every second lost game, Peter trashes his headset. Every third lost game, Peter trashes his mouse.
+        When Peter trashes both his mouse and headset in the same lost game, he also trashes his keyboard.
+        Every second time when he trashes his keyboard, he also trashes his display.
+        You will receive the price of each item in his gaming setup. Calculate his rage expenses for renewing his gaming equipment.*/
+
         Scanner scanner = new Scanner(System.in);
 
         int gamesLost = Integer.parseInt(scanner.nextLine());

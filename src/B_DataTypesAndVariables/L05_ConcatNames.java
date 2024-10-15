@@ -6,6 +6,8 @@ public class L05_ConcatNames {
 
     public static void main(String[] args) {
 
+        //Read two names and a delimiter. Print the names joined by the delimiter.
+
         Scanner scanner = new Scanner(System.in);
 
         String nameA = scanner.nextLine();

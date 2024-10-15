@@ -7,14 +7,13 @@ public class L05_EvenAndOddSubtraction {
 
     public static void main(String[] args) {
 
+        //Write a program that calculates the difference between the sum of the even and the sum of the odd numbers in an array.
+
         Scanner scanner = new Scanner(System.in);
         int sumEven = 0;
         int sumOdd = 0;
 
-        int[] numbers = Arrays.stream(scanner.nextLine()
-                        .split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for (int index = 0; index < numbers.length; index++) {
 

@@ -6,6 +6,8 @@ public class E02_SumDigits {
 
     public static void main(String[] args) {
 
+        //You will be given a single integer. Your task is to find the sum of its digits.
+
         Scanner scanner = new Scanner(System.in);
 
         int number = Integer.parseInt(scanner.nextLine());

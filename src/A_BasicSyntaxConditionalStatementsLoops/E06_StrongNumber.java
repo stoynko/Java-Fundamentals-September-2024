@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class E06_StrongNumber {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        /*Write a program to check whether or not a given number is strong. A number is strong if the sum of the Factorial of each digit is equal to the number.
+        For example 145 is a strong number, because 1! + 4! + 5! = 145. Print "yes" if the number is strong and "no" if the number is not strong.*/
 
+        Scanner scanner = new Scanner(System.in);
         int integer = Integer.parseInt(scanner.nextLine());
         int initialInteger = integer;
         int totalFactorial = 0;

@@ -6,6 +6,15 @@ public class AE01_DataTypeFinder {
 
     public static void main(String[] args) {
 
+        /*You will receive input until you receive "END". Find what data type is the input. Possible data types are:
+            •	Integer
+            •	Floating point
+            •	Characters
+            •	Boolean
+            •	Strings
+
+        Print the result in the following format: "{input} is {data type} type".*/
+
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
@@ -40,8 +49,7 @@ public class AE01_DataTypeFinder {
                                     break;
                                 }
                                 continue;
-                            }
-                            else{
+                            } else {
                                 dataType = "string";
                                 isInvalid = true;
                                 isDecimal = false;
