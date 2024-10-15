@@ -1,4 +1,4 @@
-package E_List;
+package E_Lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
