@@ -29,7 +29,6 @@ public class L04_TimeAfterThirty {
             minutes = (minutes + 30) - 60;
         } else
             minutes = minutes + 30;
-
         System.out.printf("%d:%02d", hour, minutes);
     }
 }

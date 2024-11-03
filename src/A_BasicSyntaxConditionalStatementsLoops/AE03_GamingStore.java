@@ -35,6 +35,7 @@ public class AE03_GamingStore {
         boolean invalidProduct = false;
         boolean outOfMoney = false;
         String input = scanner.nextLine();
+
         while (true) {
             if (balance <= 0) {
                 outOfMoney = true;
@@ -70,6 +71,7 @@ public class AE03_GamingStore {
                 }
                 default -> invalidProduct = true;
             }
+
             if (invalidProduct) {
                 System.out.println("Not Found");
                 invalidProduct = false;
@@ -82,6 +84,7 @@ public class AE03_GamingStore {
             }
             input = scanner.nextLine();
         }
+
         if (!outOfMoney) {
             System.out.printf("Total spent: $%.2f. Remaining: $%.2f", totalCost, balance);
         } else {

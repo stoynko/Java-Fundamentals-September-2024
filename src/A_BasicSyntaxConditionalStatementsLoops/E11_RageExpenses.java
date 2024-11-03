@@ -13,12 +13,12 @@ public class E11_RageExpenses {
         You will receive the price of each item in his gaming setup. Calculate his rage expenses for renewing his gaming equipment.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int gamesLost = Integer.parseInt(scanner.nextLine());
         double priceHeadset = Double.parseDouble(scanner.nextLine());
         double priceMouse = Double.parseDouble(scanner.nextLine());
         double priceKeyboard = Double.parseDouble(scanner.nextLine());
         double priceDisplay = Double.parseDouble(scanner.nextLine());
+
         int counterHeadset = 0;
         int counterMouse = 0;
         int counterKeyboard = 0;
@@ -39,6 +39,7 @@ public class E11_RageExpenses {
             }
         }
         double expenses = (counterHeadset * priceHeadset) + (counterMouse * priceMouse) + (counterKeyboard * priceKeyboard) + (counterDisplay * priceDisplay);
+
         System.out.printf("Rage expenses: %.2f lv.", expenses);
     }
 }

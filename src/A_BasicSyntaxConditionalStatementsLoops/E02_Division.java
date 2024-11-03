@@ -24,6 +24,7 @@ public class E02_Division {
                 isDivisible = true;
             }
         }
+
         if (isDivisible)
             System.out.printf("The number is divisible by %d", maxDivisor);
         else

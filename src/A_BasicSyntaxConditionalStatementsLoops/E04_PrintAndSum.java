@@ -18,6 +18,7 @@ public class E04_PrintAndSum {
             sum += integerA;
             integerA++;
         }
+
         System.out.printf("%nSum: %d", sum);
     }
 }

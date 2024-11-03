@@ -9,6 +9,7 @@ public class E08_TriangleOfNumbers {
 
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
+
         for (int i = 1; i <= n; i++) {
 
             for (int k = 1; k <= i; k++) {

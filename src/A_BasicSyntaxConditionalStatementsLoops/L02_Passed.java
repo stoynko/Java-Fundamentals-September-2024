@@ -10,7 +10,6 @@ public class L02_Passed {
             •	If the grade is equal or more than 3.00, print "Passed!"*/
 
         Scanner scanner = new Scanner(System.in);
-
         double grade = Double.parseDouble(scanner.nextLine());
 
         if (grade >= 3) {

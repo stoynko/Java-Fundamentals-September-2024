@@ -25,6 +25,7 @@ public class AE02_NameOfLastDigit {
             case 9 -> name = "nine";
             default -> name = "";
         };
+
         System.out.println(name);
     }
 }

@@ -11,6 +11,7 @@ public class L03_PassedOrFailed {
             •	If the grade is smaller than 3.00, print "Failed!"*/
 
         Scanner scanner = new Scanner(System.in);
+
         double grade = Double.parseDouble(scanner.nextLine());
 
         if (grade >= 3) {

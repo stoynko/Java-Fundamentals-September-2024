@@ -14,7 +14,6 @@ public class L11_EvenNumber {
         boolean isOdd = true;
 
         while (isOdd) {
-
             number = Integer.parseInt(scanner.next());
             if (number % 2 == 0) {
                 isOdd = false;

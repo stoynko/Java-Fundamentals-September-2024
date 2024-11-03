@@ -16,6 +16,7 @@ public class E05_Login {
         for (int index = username.length() - 1; index >= 0; index--) {
             password.append(username.charAt(index));
         }
+
         String passwordInput = scanner.nextLine();
         int counterAttempts = 0;
         boolean isBlocked = false;

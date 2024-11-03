@@ -32,6 +32,7 @@ public class AE05_Messages {
                     digitCount++;
                 }
             }
+
             switch (mainDigit) {
                 case "2" -> {
                     String key2 = "abc";
@@ -70,6 +71,7 @@ public class AE05_Messages {
                 }
             }
         }
+
         System.out.println(message);
     }
 }

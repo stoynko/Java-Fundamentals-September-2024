@@ -24,6 +24,7 @@ public class E06_StrongNumber {
             totalFactorial += factorial;
             integer = integer / 10;
         }
+
         if (totalFactorial == initialInteger)
             System.out.println("yes");
         else

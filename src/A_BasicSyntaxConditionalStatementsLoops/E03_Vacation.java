@@ -48,7 +48,7 @@ public class E03_Vacation {
         }
 
         double total = (groupSize * price) - ((groupSize * price) * ((double) discount / 100));
-        //313.80 -
+
         System.out.printf("Total price: %.2f", total);
     }
 }

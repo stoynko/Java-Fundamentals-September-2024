@@ -27,6 +27,7 @@ public class E01_Ages {
         } else {
             ageGroup = "elder";
         }
+
         System.out.printf("%s", ageGroup);
     }
 }

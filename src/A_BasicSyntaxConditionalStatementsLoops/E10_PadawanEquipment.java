@@ -12,7 +12,6 @@ public class E10_PadawanEquipment {
         Because the lightsabers sometimes break, George Lucas should buy 10% more, rounded up to the next integer. Also, every sixth belt is free.*/
 
         Scanner scanner = new Scanner(System.in);
-
         double balance = Double.parseDouble(scanner.nextLine());
         int students = Integer.parseInt(scanner.nextLine());
         double lightsaberPrice = Double.parseDouble(scanner.nextLine());

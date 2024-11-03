@@ -25,6 +25,7 @@ public class E07_VendingMachine {
         boolean invalidProduct = false;
         boolean purchasingStarted = false;
         String purhcasedItem = "";
+
         while (!input.equals("End")) {
             if (!input.equals("Start")) {
                 double insertedCoin = Double.parseDouble(input);
@@ -75,6 +76,7 @@ public class E07_VendingMachine {
                 input = scanner.nextLine();
             }
         }
+
         System.out.printf("Change: %.2f", total);
     }
 }

@@ -7,7 +7,6 @@ public class L08_DivisibleByThree {
         You have to use a single for loop. The program should not receive input.*/
 
         for (int i = 3; i <= 99; i += 3) {
-
             System.out.println(i);
         }
     }

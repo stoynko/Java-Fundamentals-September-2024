@@ -21,7 +21,6 @@ public class L09_SumOfOddNumbers {
         while (true) {
             if (counter == n)
                 break;
-
             if (i % 2 == 1) {
                 System.out.println(i);
                 sum += i;
@@ -29,6 +28,7 @@ public class L09_SumOfOddNumbers {
             }
             i++;
         }
+
         System.out.printf("Sum: %d", sum);
     }
 }

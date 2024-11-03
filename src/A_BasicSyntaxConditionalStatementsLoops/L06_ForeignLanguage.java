@@ -13,8 +13,8 @@ public class L06_ForeignLanguage {
             o	"unknown" -> if the entered country is any other different from countries listed above*/
 
         Scanner scanner = new Scanner(System.in);
-
         String country = scanner.nextLine();
+
         String language = switch (country) {
             case "USA", "England" -> "English";
             case "Spain", "Argentina", "Mexico" -> "Spanish";

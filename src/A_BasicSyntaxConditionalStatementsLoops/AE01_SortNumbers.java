@@ -47,6 +47,7 @@ public class AE01_SortNumbers {
                 bottom = numberA;
             }
         }
+
         System.out.println(top);
         System.out.println(mid);
         System.out.println(bottom);

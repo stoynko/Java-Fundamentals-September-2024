@@ -22,9 +22,9 @@ public class L07_TheatrePromotion {
             •	The type of day will always be valid.*/
 
         Scanner scanner = new Scanner(System.in);
-
         String dayType = scanner.nextLine();
         int age = Integer.parseInt(scanner.nextLine());
+
         int price = 0;
         boolean isValid = true;
 

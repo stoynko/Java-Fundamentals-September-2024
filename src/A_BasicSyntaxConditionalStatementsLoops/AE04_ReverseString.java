@@ -14,6 +14,7 @@ public class AE04_ReverseString {
         for (int index = input.length() - 1; index >= 0; index--) {
             result.append(input.charAt(index));
         }
+
         System.out.println(result);
     }
 }

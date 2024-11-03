@@ -13,7 +13,6 @@ public class L10_MultiplicationTable {
             •The integer will be in the interval [1…100]*/
 
         Scanner scanner = new Scanner(System.in);
-
         int n = Integer.parseInt(scanner.nextLine());
 
         for (int i = 1; i <= 10; i++) {

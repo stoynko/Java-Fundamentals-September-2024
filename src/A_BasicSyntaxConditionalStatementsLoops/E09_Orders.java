@@ -34,6 +34,7 @@ public class E09_Orders {
             total += subTotal;
             System.out.printf("The price for the coffee is: $%.2f%n", subTotal);
         }
+
         System.out.printf("Total: $%.2f%n", total);
     }
 }

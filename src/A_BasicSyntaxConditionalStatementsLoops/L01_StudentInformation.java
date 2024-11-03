@@ -11,7 +11,6 @@ public class L01_StudentInformation {
         "Name: {student name}, Age: {student age}, Grade: {student grade}".*/
 
         Scanner scanner = new Scanner(System.in);
-
         String studentName = scanner.nextLine();
         int age = Integer.parseInt(scanner.nextLine());
         double grade = Double.parseDouble(scanner.next());
