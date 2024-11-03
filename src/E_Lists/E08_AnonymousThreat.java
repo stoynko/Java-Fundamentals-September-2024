@@ -66,13 +66,15 @@ public class E08_AnonymousThreat {
 
     private static void mergeIndices(String[] actions, List<String> list) {
 
-        int startIndex = Math.max(Integer.parseInt(actions[1]), 0);
-        int endIndex = Math.min(list.size() - 1, Integer.parseInt(actions[2]));
+        if (list.size() > 1) {
+            int startIndex = Math.max(Integer.parseInt(actions[1]), 0);
+            int endIndex = Math.min(list.size() - 1, Integer.parseInt(actions[2]));
 
-        for (int index = endIndex; index > startIndex; index--) {
-            String newElement = list.get(index - 1) + list.get(index);
-            list.set(index - 1, newElement);
-            list.remove(index);
+            for (int index = endIndex; index > startIndex; index--) {
+                String newElement = list.get(index - 1) + list.get(index);
+                list.set(index - 1, newElement);
+                list.remove(index);
+            }
         }
     }
 
@@ -91,7 +93,7 @@ public class E08_AnonymousThreat {
                 int newElementCharactersCount = size / partitions;
                 while (newElementCharactersCount > 0) {
                     newElement += characters.getFirst();
-                    characters.removeFirst();
+                    characters.remove(0);
                     newElementCharactersCount--;
                 }
                 list.add(index, newElement);
@@ -102,17 +104,21 @@ public class E08_AnonymousThreat {
 
             int newElementSize = characters.size() / partitions;
             int remainder = characters.size() % partitions;
-
-            for (int i = 1; i <= partitions; i++) {
+            for (int i = 1; i < partitions; i++) {
                 String newElement = "";
                 for (int n = 0; n < newElementSize; n++) {
-                    newElement += characters.getFirst();
-                    characters.removeFirst();
+                    newElement += characters.get(0);
+                    characters.remove(0);
                 }
-                if (i == partitions) {
-                    newElement += characters.getFirst();
+                if (i + 1 == partitions) {
+                    String lastElement = "";
+                    while (!characters.isEmpty()) {
+                        lastElement += characters.get(0);
+                        characters.remove(0);
+                    }
                     list.add(index, newElement);
-                    characters.removeFirst();
+                    list.add(index + 1, lastElement);
+                    break;
                 } else {
                     list.add(index, newElement);
                 }
@@ -121,7 +127,3 @@ public class E08_AnonymousThreat {
         }
     }
 }
-
-
-
-
