@@ -12,7 +12,6 @@ public class E10_TopNumber {
             •	Holds at least one odd digit, e.g. 232, 707, 87578.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int endRange = Integer.parseInt(scanner.nextLine());
 
         for (int position = 1; position < endRange; position++) {

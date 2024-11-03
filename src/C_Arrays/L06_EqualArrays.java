@@ -15,7 +15,6 @@ public class L06_EqualArrays {
         int[] arrayB = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for (int currentIndex = 0; currentIndex < arrayA.length; currentIndex++) {
-
             if (arrayA[currentIndex] == arrayB[currentIndex]) {
                 isIdentical = true;
                 sum += arrayA[currentIndex];

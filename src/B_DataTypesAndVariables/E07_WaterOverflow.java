@@ -21,12 +21,11 @@ public class E07_WaterOverflow {
             •	liters will be in the interval [1…1000].*/
 
         Scanner scanner = new Scanner(System.in);
-
         byte iterations = Byte.parseByte(scanner.nextLine());
+
         short totalLiters = 0;
 
         for (int i = 0; i < iterations; i++) {
-
             short input = Short.parseShort(scanner.nextLine());
             if (totalLiters + input > 255) {
                 System.out.println("Insufficient capacity!");

@@ -11,10 +11,7 @@ public class E04_ArrayRotation {
         Print the resulting array.*/
 
         Scanner scanner = new Scanner(System.in);
-        int [] array = Arrays.stream(scanner.nextLine()
-                .split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        int[] array = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         int rotations = Integer.parseInt(scanner.nextLine());
         for (int i = 1; i <= rotations; i++) {
@@ -22,9 +19,8 @@ public class E04_ArrayRotation {
             for (int index = 0; index <= array.length - 1; index++) {
                 if (index == array.length - 1) {
                     array[index] = temp;
-                }
-                else {
-                    array [index] = array [index + 1];
+                } else {
+                    array[index] = array[index + 1];
                 }
             }
         }
@@ -32,7 +28,6 @@ public class E04_ArrayRotation {
             System.out.printf("%d ", element);
         }
     }
-
 
 
 }

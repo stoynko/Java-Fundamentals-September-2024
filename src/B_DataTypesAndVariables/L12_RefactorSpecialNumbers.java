@@ -35,7 +35,6 @@ public class L12_RefactorSpecialNumbers {
             System.out.printf("%d -> %s%n", current, result);
             sum = 0;
             i = current;
-
         }
     }
 }

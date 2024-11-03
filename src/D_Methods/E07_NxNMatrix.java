@@ -6,7 +6,7 @@ public class E07_NxNMatrix {
 
     public static void main(String[] args) {
 
-        //Write a method that receives a single integer n and prints an nxn matrix with that number.
+        //*Write a method that receives a single integer n and prints an nxn matrix with that number*/
 
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());

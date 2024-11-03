@@ -22,7 +22,6 @@ public class E04_ListOperations {
 
 
         Scanner scanner = new Scanner(System.in);
-
         List<Integer> integerList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         String input = scanner.nextLine();
 

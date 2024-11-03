@@ -10,6 +10,7 @@ public class L11_MathOperations {
           The first will be the first number, the second one will be the operator, and the last one will be the second number. The possible operators are: / * + -*/
 
         Scanner scanner = new Scanner(System.in);
+
         int operatorA = Integer.parseInt(scanner.nextLine());
         String operation = scanner.nextLine();
         int operatorB = Integer.parseInt(scanner.nextLine());

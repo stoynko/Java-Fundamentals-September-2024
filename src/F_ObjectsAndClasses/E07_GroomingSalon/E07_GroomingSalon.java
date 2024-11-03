@@ -8,6 +8,5 @@ public class E07_GroomingSalon {
 
         Scanner scanner = new Scanner(System.in);
 
-
     }
 }

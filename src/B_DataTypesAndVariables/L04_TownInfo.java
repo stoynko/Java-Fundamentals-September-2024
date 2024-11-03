@@ -10,7 +10,6 @@ public class L04_TownInfo {
         Use the correct data types and print the result in the following format: "Town {town name} has population of {population} and area {area} square km.".*/
 
         Scanner scanner = new Scanner(System.in);
-
         String cityName = scanner.nextLine();
         long cityPopulation = Integer.parseInt(scanner.nextLine());
         short cityArea = Short.parseShort(scanner.nextLine());

@@ -37,7 +37,6 @@ public class Main {
         String input = scanner.nextLine();
 
         while (!input.equals("End")) {
-
             String[] vehicleData = input.split(" ");
             String typeOfVehicle = vehicleData[0];
             String model = vehicleData[1];

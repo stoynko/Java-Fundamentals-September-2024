@@ -18,7 +18,6 @@ public class AE02_PascalTriangle {
         System.out.println(previousRow[0]);
 
         for (int row = 2; row <= rowsCount; row++) {
-
             int[] currentRow = new int[row];
             currentRow[0] = 1;
             currentRow[row - 1] = 1;

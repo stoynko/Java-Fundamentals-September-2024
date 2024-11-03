@@ -26,7 +26,6 @@ public class E06_CardsGame {
         boolean playerBWins = false;
 
         while (true) {
-
             int cardPlayerA = deckPlayerA.getFirst();
             int cardPlayerB = deckPlayerB.getFirst();
 

@@ -8,9 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*Using the Person class, write a program that reads from the console N lines of personal information and then prints all people whose age is more than 30 years.*/
+
         Scanner scanner = new Scanner(System.in);
         int peopleAmount = Integer.parseInt(scanner.nextLine());
         List<Person> people = new ArrayList<>();
+
         for (int person = 1; person <= peopleAmount; person++) {
 
             String[] data = scanner.nextLine().split(" ");

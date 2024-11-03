@@ -1,6 +1,7 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.*;
 
 public class E07_LegendaryFarming {
 
@@ -12,6 +13,7 @@ public class E07_LegendaryFarming {
             •	"Shadowmourne" - requires 250 Shards
             •	"Valanyr" - requires 250 Fragments
             •	"Dragonwrath" - requires 250 Motes
+
         "Shards", "Fragments", and "Motes" are the key materials (case-insensitive), and everything else is junk. You will be given lines of input in the format:
         "{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}"
 
@@ -35,6 +37,19 @@ public class E07_LegendaryFarming {
 
         Scanner scanner = new Scanner(System.in);
 
+        String[] input = scanner.nextLine().split("\\s+");
+        List<Integer> quantity = new ArrayList<>();
+        List<String> items = new ArrayList<>();
 
+        for (int index = 0; index < input.length - 1; index++) {
+            if (index % 2 == 0) {
+                quantity.add(Integer.parseInt(input[index]));
+            } else {
+                items.add(input[index]);
+            }
+        }
+
+        System.out.println(quantity.toString());
+        System.out.println(items.toString());
     }
 }

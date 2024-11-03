@@ -11,7 +11,6 @@ public class AE02_CenterPoint {
         If the points are at the same distance from the center, print only the first one.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int pointA_X = Integer.parseInt(scanner.nextLine());
         int pointA_Y = Integer.parseInt(scanner.nextLine());
         int pointB_X = Integer.parseInt(scanner.nextLine());

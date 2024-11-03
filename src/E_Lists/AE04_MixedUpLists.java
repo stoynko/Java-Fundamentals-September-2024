@@ -22,6 +22,7 @@ public class AE04_MixedUpLists {
         List<Integer> mixedList = new ArrayList<>();
 
         int iterations = Math.min(listA.size(), listB.size());
+
         for (int currentIteration = 1; currentIteration <= iterations; currentIteration++) {
             mixedList.add(listA.get(0));
             listA.remove(0);
@@ -39,6 +40,7 @@ public class AE04_MixedUpLists {
             higherRange = Math.max(listA.get(0), listA.get(1));
         }
         List<Integer> sortedList = new ArrayList<>();
+
         while (!mixedList.isEmpty()) {
             if (mixedList.get(0) > lowerRange && mixedList.get(0) < higherRange) {
                 sortedList.add(mixedList.get(0));

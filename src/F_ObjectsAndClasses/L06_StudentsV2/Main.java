@@ -20,7 +20,6 @@ public class Main {
         String input = scanner.nextLine();
 
         while (!input.equals("end")) {
-
             String[] data = input.split(" ");
             String firstName = data[0];
             String lastName = data[1];

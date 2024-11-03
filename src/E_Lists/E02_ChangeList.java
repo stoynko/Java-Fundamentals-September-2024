@@ -21,7 +21,6 @@ public class E02_ChangeList {
         String input = scanner.nextLine();
 
         while (!input.equals("end")) {
-
             String[] action = input.split(" ");
             if (action[0].equals("Insert")) {
                 integers.add(Integer.parseInt(action[2]), Integer.parseInt(action[1]));

@@ -23,7 +23,6 @@ public class L03_MergingLists {
         int cycleCount = Math.min(ListA.size(), ListB.size());
 
         if (ListA.size() > ListB.size()) {
-
             int index = 0;
             while (index < cycleCount) {
                 mergedList.add(ListA.get(index));

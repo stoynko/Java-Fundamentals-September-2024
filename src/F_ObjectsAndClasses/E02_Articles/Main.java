@@ -34,6 +34,7 @@ public class Main {
 
         Article article = new Article(title, content, author);
         int numberOfOperations = Integer.parseInt(scanner.nextLine());
+
         for (int operation = 1; operation <= numberOfOperations; operation++) {
             String input = scanner.nextLine();
             String[] actions = input.split(": ");

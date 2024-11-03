@@ -14,7 +14,6 @@ public class E07_AppendArrays {
             	Order the arrays from the last to the first and their values from left to right.*/
 
         Scanner scanner = new Scanner(System.in);
-
         List<String> list = Arrays.stream(scanner.nextLine().split("\\|")).collect(Collectors.toList());
 
         Collections.reverse(list);

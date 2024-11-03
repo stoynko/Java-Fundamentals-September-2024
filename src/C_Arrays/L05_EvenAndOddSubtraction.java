@@ -16,7 +16,6 @@ public class L05_EvenAndOddSubtraction {
         int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for (int index = 0; index < numbers.length; index++) {
-
             if (numbers[index] % 2 == 0) {
                 sumEven += numbers[index];
             } else {

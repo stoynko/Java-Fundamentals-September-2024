@@ -11,6 +11,7 @@ public class E01_Train {
         print the whole train and the sum of the people on the train.*/
 
         Scanner scanner = new Scanner(System.in);
+
         int wagonCount = Integer.parseInt(scanner.nextLine());
         int[] passengers = new int[wagonCount];
         int passengersSum = 0;

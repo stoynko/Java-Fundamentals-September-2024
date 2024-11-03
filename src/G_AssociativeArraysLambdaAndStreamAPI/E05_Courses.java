@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E05_Courses {
 
@@ -18,6 +18,28 @@ public class E05_Courses {
             •	Print information about each student, following the format: "-- {studentName}"*/
 
         Scanner scanner = new Scanner(System.in);
+        Map<String, List<String>> courses = new LinkedHashMap<>();
+        String input = scanner.nextLine();
 
+        while (!input.equals("end")) {
+            String[] courseInfo = input.split(" : ");
+            String courseName = courseInfo[0];
+            String studentName = courseInfo[1];
+            if (courses.containsKey(courseName)) {
+                courses.get(courseName).add(studentName);
+            } else {
+                courses.put(courseName, new ArrayList<>());
+                courses.get(courseName).add(studentName);
+            }
+            input = scanner.nextLine();
+        }
+
+        courses.forEach((course, students) -> {
+            int attendingStudents = courses.get(course).size();
+            System.out.printf("%s: %d%n", course, attendingStudents);
+            for (String student : students) {
+                System.out.printf("-- %s%n", student);
+            }
+        });
     }
 }

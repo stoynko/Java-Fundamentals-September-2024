@@ -14,6 +14,7 @@ public class L02_GaussTrick {
 
         List<Integer> integers = new ArrayList<>(Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList()));
         List<Integer> summedIntegers = new ArrayList<>();
+
         for (int n = 0; n < integers.size() / 2; n++) {
             summedIntegers.add(integers.get(n) + integers.get(integers.size() - 1 - n));
         }

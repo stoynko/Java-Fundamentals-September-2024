@@ -35,15 +35,15 @@ public class AE03_TakeSkipRope {
             •	The encrypted message will contain any printable ASCII character.*/
 
         Scanner scanner = new Scanner(System.in);
+        StringBuilder output = new StringBuilder();
 
         List<String> input = Arrays.stream(scanner.nextLine().split("")).collect(Collectors.toList());
         List<Integer> integers = checkForIntegersAndStore(input);
         List<Integer> takeList = splitByEvenIndex(integers);
         List<Integer> skipList = splitByOddIndex(integers);
-
         boolean take = true;
         boolean skip = false;
-        StringBuilder output = new StringBuilder();
+
         while (!takeList.isEmpty() || !skipList.isEmpty()) {
             int elementsToModify;
             if (take) {

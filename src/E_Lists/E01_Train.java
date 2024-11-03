@@ -20,8 +20,8 @@ public class E01_Train {
         List<Integer> wagons = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         int maxCapacity = Integer.parseInt(scanner.nextLine());
         String input = scanner.nextLine();
-        while (!input.equals("end")) {
 
+        while (!input.equals("end")) {
             String[] action = input.split(" ");
             if (action[0].equals("Add")) {
                 wagons.add(Integer.parseInt(action[1]));

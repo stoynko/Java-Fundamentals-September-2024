@@ -8,7 +8,7 @@ public class L05_ListOfProducts {
 
     public static void main(String[] args) {
 
-        //Read a number n and n lines of products. Print a numbered list of all the products ordered by name.
+        /*Read a number n and n lines of products. Print a numbered list of all the products ordered by name.*/
 
         Scanner scanner = new Scanner(System.in);
 

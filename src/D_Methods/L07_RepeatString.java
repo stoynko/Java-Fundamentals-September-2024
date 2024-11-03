@@ -10,9 +10,9 @@ public class L07_RepeatString {
           The method should return a new string (the old one repeated n times).*/
 
         Scanner scanner = new Scanner(System.in);
-
         String input = scanner.nextLine();
         int count = Integer.parseInt(scanner.nextLine());
+
         System.out.println(repeatString(input, count));
     }
 

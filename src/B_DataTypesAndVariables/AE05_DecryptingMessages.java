@@ -22,7 +22,6 @@ public class AE05_DecryptingMessages {
             •	You will receive one letter per line.*/
 
         Scanner scanner = new Scanner(System.in);
-
         byte key = Byte.parseByte(scanner.nextLine());
         byte inputCount = Byte.parseByte(scanner.nextLine());
         StringBuilder decryptedMessage = new StringBuilder();

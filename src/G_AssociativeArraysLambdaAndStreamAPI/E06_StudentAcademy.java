@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E06_StudentAcademy {
 
@@ -14,7 +14,32 @@ public class E06_StudentAcademy {
         Format the average grade to the 2nd decimal place.*/
 
         Scanner scanner = new Scanner(System.in);
+        Map<String, List<Double>> students = new LinkedHashMap<>();
+        int inputCount = Integer.parseInt(scanner.nextLine());
 
+        for (int currentInput = 1; currentInput <= inputCount; currentInput++) {
+            String studentName = scanner.nextLine();
+            double grade = Double.parseDouble(scanner.nextLine());
 
+            if (students.containsKey(studentName)) {
+                students.get(studentName).add(grade);
+            } else {
+                students.put(studentName, new ArrayList<>());
+                students.get(studentName).add(grade);
+            }
+        }
+        Map<String, Double> output = new LinkedHashMap<>();
+
+        students.forEach((student, grades) -> {
+            double gradesSum = students.get(student).stream().mapToDouble(i -> i).sum();
+            double averageGrade = gradesSum / students.get(student).size();
+            if (averageGrade >= 4.5) {
+                output.put(student, averageGrade);
+            }
+        });
+
+        output.forEach((student, grade) -> {
+            System.out.printf("%s -> %.2f%n", student, grade);
+        });
     }
 }

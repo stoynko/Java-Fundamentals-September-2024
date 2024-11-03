@@ -13,7 +13,6 @@ public class E09_ArrayModifier {
             •	"decrease" decreases all elements in the array with 1.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         String input = scanner.nextLine();
 

@@ -14,7 +14,6 @@ public class L06_RemoveNegativesAndReverse {
         // In case of no elements left in the list, print "empty".
 
         Scanner scanner = new Scanner(System.in);
-
         List<Integer> integerList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).filter(n -> n > 0).collect(Collectors.toList());
 
         if (integerList.isEmpty()) {

@@ -15,7 +15,6 @@ public class Main {
         Print only the names of the songs which are from that Type List / All songs.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int numberOfSongs = Integer.parseInt(scanner.nextLine());
         List<Songs> songsList = new ArrayList<>();
 

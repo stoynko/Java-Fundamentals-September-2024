@@ -10,7 +10,6 @@ public class E08_FactorialDivision {
         Divide the first result by the second and print the division formatted to the second decimal point.*/
 
         Scanner scanner = new Scanner(System.in);
-
         double numberA = Math.abs(Double.parseDouble(scanner.nextLine()));
         double numberB = Math.abs(Double.parseDouble(scanner.nextLine()));
         System.out.printf("%.2f", factorial(numberA) / factorial(numberB));

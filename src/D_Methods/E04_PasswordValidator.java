@@ -16,8 +16,8 @@ public class E04_PasswordValidator {
             •	"Password must have at least 2 digits"*/
 
         Scanner scanner = new Scanner(System.in);
-
         String passwordInput = scanner.nextLine();
+
         if (isPasswordLengthValid(passwordInput)) {
             if (isPasswordInputValid(passwordInput)) {
                 if (isPasswordDigitCountValid(passwordInput)) {

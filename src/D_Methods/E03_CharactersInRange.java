@@ -6,7 +6,7 @@ public class E03_CharactersInRange {
 
     public static void main(String[] args) {
 
-        //Write a method that receives two characters and prints all the characters in between them on a single line according to ASCII.
+        /*Write a method that receives two characters and prints all the characters in between them on a single line according to ASCII.*/
 
         Scanner scanner = new Scanner(System.in);
 

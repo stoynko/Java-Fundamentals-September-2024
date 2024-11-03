@@ -23,12 +23,11 @@ public class E08_BeerKegs {
             •	The height will be an integer in the interval [1…2147483647].*/
 
         Scanner scanner = new Scanner(System.in);
-
         byte numberKegs = Byte.parseByte(scanner.nextLine());
+
         String biggestKeg = "";
         double volumeTemp = Double.MIN_VALUE;
         for (int i = 1; i <= numberKegs; i++) {
-
             String model = scanner.nextLine();
             double radius = Double.parseDouble(scanner.nextLine());
             int height = Integer.parseInt(scanner.nextLine());

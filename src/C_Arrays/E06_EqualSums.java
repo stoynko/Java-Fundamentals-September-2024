@@ -12,7 +12,6 @@ public class E06_EqualSums {
         Print the index that satisfies the required condition or "no" if there is no such index.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         boolean isEven = false;
 

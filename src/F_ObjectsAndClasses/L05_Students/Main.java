@@ -28,6 +28,7 @@ public class Main {
             input = scanner.nextLine();
         }
         input = scanner.nextLine();
+
         for (Students student : studentsList) {
             if (student.getHometown().equals(input)) {
                 System.out.printf("%s %s is %d years old%n", student.getFirstName(), student.getLastName(), student.getAge());

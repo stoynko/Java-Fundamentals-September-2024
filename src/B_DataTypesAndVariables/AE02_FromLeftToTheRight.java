@@ -11,11 +11,9 @@ public class AE02_FromLeftToTheRight {
         print the sum of all digits in the right number.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int rowsCount = Integer.parseInt(scanner.nextLine());
 
         for (int i = 1; i <= rowsCount; i++) {
-
             long sum = 0;
             long numberA = scanner.nextLong();
             long numberB = scanner.nextLong();
@@ -32,6 +30,7 @@ public class AE02_FromLeftToTheRight {
                     numberB = numberB / 10;
                 }
             }
+
             System.out.println(Math.abs(sum));
         }
     }

@@ -31,6 +31,7 @@ public class AE01_DataTypeFinder {
             } else {
                 System.out.printf("%s is string type%n", input);
             }
+
             input = scanner.nextLine();
         }
     }

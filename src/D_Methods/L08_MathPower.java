@@ -7,7 +7,7 @@ public class L08_MathPower {
 
     public static void main(String[] args) {
 
-        //Create a method that calculates and returns the value of a number raised to a given power.
+        /*Create a method that calculates and returns the value of a number raised to a given power*/
 
         Scanner scanner = new Scanner(System.in);
         double number = Integer.parseInt(scanner.nextLine());

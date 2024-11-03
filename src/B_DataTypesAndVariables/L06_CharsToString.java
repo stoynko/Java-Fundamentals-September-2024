@@ -15,6 +15,7 @@ public class L06_CharsToString {
         String charThree = scanner.nextLine();
 
         String result = charOne + charTwo + charThree;
+
         System.out.println(result);
     }
 }

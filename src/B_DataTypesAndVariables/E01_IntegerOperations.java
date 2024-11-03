@@ -13,7 +13,6 @@ public class E01_IntegerOperations {
             •	The four numbers from the input are in the range [-2,147,483,648… 2,147,483,647].*/
 
         Scanner scanner = new Scanner(System.in);
-
         int num1 = Integer.parseInt(scanner.nextLine());
         int num2 = Integer.parseInt(scanner.nextLine());
         int num3 = Integer.parseInt(scanner.nextLine());

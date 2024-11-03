@@ -19,7 +19,6 @@ public class E03_ZigZagArrays {
             String input = scanner.nextLine();
             int elementA = Integer.parseInt(input.split(" ")[0]);
             int elementB = Integer.parseInt(input.split(" ")[1]);
-
             if (index % 2 == 0) {
                 arrayA[index] = elementA;
                 arrayB[index] = elementB;

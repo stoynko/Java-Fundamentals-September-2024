@@ -22,15 +22,13 @@ public class E09_SpiceMustFlow {
         Constraints:
             •	The starting yield will be a positive integer within the range [0 … 2 147 483 647].*/
 
-
         Scanner scanner = new Scanner(System.in);
-
         int spiceYield = Integer.parseInt(scanner.nextLine());
+
         int minedTotal = 0;
         byte daysCounter = 0;
 
         while (spiceYield >= 100) {
-
             daysCounter++;
             minedTotal += spiceYield - 26;
 

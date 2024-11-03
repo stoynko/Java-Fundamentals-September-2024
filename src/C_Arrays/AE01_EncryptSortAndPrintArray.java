@@ -21,14 +21,13 @@ public class AE01_EncryptSortAndPrintArray {
         String vowels = "aeiouaeiouAEIOU";
 
         for (int currentString = 0; currentString < stringCount; currentString++) {
-
             char[] word = scanner.nextLine().toCharArray();
             for (int index = 0; index <= word.length - 1; index++) {
 
                 int currentCharASCII = word[index];
                 if (vowels.indexOf(word[index]) != -1) {
                     results[currentString] += currentCharASCII * word.length;
-                } else{
+                } else {
                     results[currentString] += currentCharASCII / word.length;
                 }
             }

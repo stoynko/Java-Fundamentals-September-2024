@@ -11,10 +11,7 @@ public class E05_TopIntegers {
         A top integer is an integer that is bigger than all the elements to its right.*/
 
         Scanner scanner = new Scanner(System.in);
-        int[] numbers = Arrays.stream(scanner.nextLine()
-                        .split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for (int index = 0; index < numbers.length - 1; index++) {
             boolean isBigger = false;

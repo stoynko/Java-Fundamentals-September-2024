@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class L08_LowerOrUpper {
 
     public static void main(String[] args) {
-
         //Write a program that prints whether a given character is upper-case or lower-case.
 
         Scanner scanner = new Scanner(System.in);

@@ -11,8 +11,8 @@ public class E09_PalindromeIntegers {
         For each numbered print, whether the number is palindrome or not.*/
 
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
 
+        String input = scanner.nextLine();
         while (!input.equals("END")) {
             System.out.println(isNumberPalindrome(input));
             input = scanner.nextLine();

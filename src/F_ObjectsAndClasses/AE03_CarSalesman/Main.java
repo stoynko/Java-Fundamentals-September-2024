@@ -2,7 +2,7 @@ package F_ObjectsAndClasses.AE03_CarSalesman;
 
 import java.util.Scanner;
 
-public class AE03_CarSalesman {
+public class Main {
 
     public static void main(String[] args) {
 

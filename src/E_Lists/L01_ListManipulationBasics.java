@@ -28,7 +28,6 @@ public class L01_ListManipulationBasics {
         String input = scanner.nextLine();
 
         while (!input.equals("end")) {
-
             String[] command = input.split(" ");
             switch (command[0]) {
                 case "Add" -> integers.add(Integer.parseInt((command[1])));

@@ -13,7 +13,6 @@ public class E10_TheLift {
         Scanner scanner = new Scanner(System.in);
 
         int queueSize = Integer.parseInt(scanner.nextLine());
-
         int[] lift = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for (int index = 0; index <= lift.length - 1; index++) {

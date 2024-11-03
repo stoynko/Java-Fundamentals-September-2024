@@ -10,7 +10,6 @@ public class E06_MiddleCharacters {
         If the length of the string is even, there are two middle characters.*/
 
         Scanner scanner = new Scanner(System.in);
-
         String[] input = scanner.nextLine().split("");
         printMiddleCharacters(input);
     }

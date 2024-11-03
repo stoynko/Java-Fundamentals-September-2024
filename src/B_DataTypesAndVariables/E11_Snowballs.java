@@ -29,10 +29,10 @@ public class E11_Snowballs {
             •	The snowballTime is an integer in the range [1, 500].
             •	The snowballQuality is an integer in the range [0, 100].
             •	Allowed working time / memory: 100ms / 16MB.*/
-        
-        Scanner scanner = new Scanner(System.in);
 
+        Scanner scanner = new Scanner(System.in);
         byte snowballs = Byte.parseByte(scanner.nextLine());
+
         int bestSnow = 0;
         int bestTime = 0;
         int bestQuality = 0;

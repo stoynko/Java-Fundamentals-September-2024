@@ -30,6 +30,7 @@ public class Main {
         }
         students.sort(Comparator.comparing(Student::getGrade));
         Collections.reverse(students);
+
         for (Student currentStudent : students) {
             currentStudent.printStudent();
         }

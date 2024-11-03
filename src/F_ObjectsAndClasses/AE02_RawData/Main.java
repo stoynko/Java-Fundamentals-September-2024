@@ -2,7 +2,7 @@ package F_ObjectsAndClasses.AE02_RawData;
 
 import java.util.Scanner;
 
-public class AE02_RawData {
+public class Main {
 
     public static void main(String[] args) {
 

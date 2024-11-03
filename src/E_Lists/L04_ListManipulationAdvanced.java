@@ -21,10 +21,10 @@ public class L04_ListManipulationAdvanced {
 
         List<Integer> integerList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         String input = scanner.nextLine();
+
         while (!input.equals("end")) {
             String[] command = input.split(" ");
             switch (command[0]) {
-
                 case "Contains" -> {
                     if (integerList.contains(Integer.parseInt(command[1]))) {
                         System.out.println("Yes");

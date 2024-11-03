@@ -14,6 +14,7 @@ public class L04_Calculations {
         String input = scanner.nextLine();
         int digitA = Integer.parseInt(scanner.nextLine());
         int digitB = Integer.parseInt(scanner.nextLine());
+
         switch (input) {
             case "add":
                 add(digitA, digitB);

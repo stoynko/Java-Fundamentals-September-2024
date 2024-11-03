@@ -15,10 +15,9 @@ public class AE01_Messaging {
          you must remove the character you have taken from it (so for the next index, the text will be with one characterless).*/
 
         Scanner scanner = new Scanner(System.in);
-
+        StringBuilder output = new StringBuilder();
         List<Integer> integersList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         List<String> inputList = Arrays.stream(scanner.nextLine().split("")).collect(Collectors.toList());
-        StringBuilder output = new StringBuilder();
 
         for (int number : integersList) {
             int sum = 0;

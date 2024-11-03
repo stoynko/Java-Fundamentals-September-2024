@@ -10,7 +10,6 @@ public class E08_MagicSum {
         //Write a program that prints all unique pairs in an array of integers whose sum is equal to a given number.
 
         Scanner scanner = new Scanner(System.in);
-
         int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         int target = Integer.parseInt(scanner.nextLine());
 

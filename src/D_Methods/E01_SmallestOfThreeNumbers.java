@@ -6,9 +6,10 @@ public class E01_SmallestOfThreeNumbers {
 
     public static void main(String[] args) {
 
-        //Write a method to print the smallest of three integer numbers. Use an appropriate name for the method.
+        /*Write a method to print the smallest of three integer numbers. Use an appropriate name for the method.*/
 
         Scanner scanner = new Scanner(System.in);
+
         int numberA = Integer.parseInt(scanner.nextLine());
         int numberB = Integer.parseInt(scanner.nextLine());
         int numberC = Integer.parseInt(scanner.nextLine());

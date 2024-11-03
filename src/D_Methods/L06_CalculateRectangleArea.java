@@ -6,7 +6,7 @@ public class L06_CalculateRectangleArea {
 
     public static void main(String[] args) {
 
-        //Create a method that calculates and returns the area of a rectangle by given width and length.
+        //Create a method that calculates and returns the area of a rectangle by given width and length*/
 
         Scanner scanner = new Scanner(System.in);
 

@@ -39,6 +39,7 @@ public class E10_SoftUniCoursePlanning {
             String[] actions = input.split(":");
             String action = actions[0];
             String lessonTitle = actions[1];
+
             switch (action) {
                 case "Add" -> {
                     if (!isLessonScheduled(lessons, lessonTitle)) {

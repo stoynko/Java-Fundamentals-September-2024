@@ -26,6 +26,7 @@ public class L05_Orders {
             case "snacks" -> 2.00;
             default -> 0;
         };
+
         printOrderTotal(quantity, productPrice);
     }
 

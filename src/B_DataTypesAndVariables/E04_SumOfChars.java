@@ -20,12 +20,11 @@ public class E04_SumOfChars {
             •	You will always receive one letter per line.*/
 
         Scanner scanner = new Scanner(System.in);
-
         byte n = Byte.parseByte(scanner.nextLine());
+
         short sum = 0;
 
         for (int i = 1; i <= n; i++) {
-
             char character = scanner.nextLine().charAt(0);
             short ASCII = (short) character;
             sum += ASCII;

@@ -1,6 +1,6 @@
 package F_ObjectsAndClasses.E01_AdvertisementMessage;
 
-public class Message_Class {
+public class Messages {
 
     private String[] phrases = {"Excellent product.", "Such a great product.", "I always use that product.",
             "Best product of its category.", "Exceptional product.", "I can’t live without this product."};

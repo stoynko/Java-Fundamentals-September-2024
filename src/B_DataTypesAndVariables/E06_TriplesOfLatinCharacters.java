@@ -10,6 +10,7 @@ public class E06_TriplesOfLatinCharacters {
 
         Scanner scanner = new Scanner(System.in);
         byte n = Byte.parseByte(scanner.nextLine());
+
         byte start = 97;
         byte end = 122;
         byte range = (byte) (start + n);

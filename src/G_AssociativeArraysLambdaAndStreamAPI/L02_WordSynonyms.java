@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class L02_WordSynonyms {
 
@@ -15,7 +15,18 @@ public class L02_WordSynonyms {
         {word} - {synonym1, synonym2… synonymN}*/
 
         Scanner scanner = new Scanner(System.in);
+        int n = Integer.parseInt(scanner.nextLine());
+        Map<String, List<String>> map = new LinkedHashMap<>();
 
+        for (int currentWord = 1; currentWord <= n; currentWord++) {
+            String word = scanner.nextLine();
+            String synonym = scanner.nextLine();
+            map.putIfAbsent(word, new ArrayList<>());
+            map.get(word).add(synonym);
+        }
 
+        for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+            System.out.printf("%s - %s%n", entry.getKey(), String.join(", ", entry.getValue()));
+        }
     }
 }

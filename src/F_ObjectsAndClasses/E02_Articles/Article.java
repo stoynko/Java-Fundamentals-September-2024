@@ -2,12 +2,10 @@ package F_ObjectsAndClasses.E02_Articles;
 
 public class Article {
 
-    // Object characteristics
     private String title;
     private String content;
     private String author;
 
-    //Getters
     public String getTitle() {
         return this.title;
     }
@@ -20,7 +18,6 @@ public class Article {
         return this.author;
     }
 
-    //Setters
 
     public void setTitle(String title) {
         this.title = title;
@@ -34,7 +31,6 @@ public class Article {
         this.author = author;
     }
 
-    // Methods
     public void changeContent(String content) {
         this.content = content;
     }
@@ -51,7 +47,6 @@ public class Article {
         System.out.printf("%s - %s: %s", this.title, this.content, this.author);
     }
 
-    // Constructor
     public Article(String title, String content, String author) {
         this.title = title;
         this.content = content;

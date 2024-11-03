@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E03_Orders {
 
@@ -18,7 +18,27 @@ public class E03_Orders {
             •	Format the average total price to the 2nd decimal place.*/
 
         Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        Map<String, Double> productsPrice = new LinkedHashMap<>();
+        Map<String, Integer> productsQuantity = new LinkedHashMap<>();
 
+        while (!input.equals("buy")) {
+            String[] productsData = input.split(" ");
+            String productName = productsData[0];
+            double productPrice = Double.parseDouble(productsData[1]);
+            int quantity = Integer.parseInt(productsData[2]);
 
+            if (!productsQuantity.containsKey(productName)) {
+                productsQuantity.put(productName, quantity);
+            } else {
+                int currentQuantity = productsQuantity.get(productName);
+                productsQuantity.put(productName, currentQuantity + quantity);
+            }
+            productsPrice.put(productName, productPrice);
+            input = scanner.nextLine();
+        }
+        for (Map.Entry<String, Double> entry : productsPrice.entrySet()) {
+            System.out.printf("%s -> %.2f%n", entry.getKey(), productsQuantity.get(entry.getKey()) * entry.getValue());
+        }
     }
 }

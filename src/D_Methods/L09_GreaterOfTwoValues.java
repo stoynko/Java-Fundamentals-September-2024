@@ -10,7 +10,6 @@ public class L09_GreaterOfTwoValues {
           Create a method getMax() that returns the greater of the two values.*/
 
         Scanner scanner = new Scanner(System.in);
-
         String input = scanner.nextLine();
         String comparatorA = scanner.nextLine();
         String comparatorB = scanner.nextLine();

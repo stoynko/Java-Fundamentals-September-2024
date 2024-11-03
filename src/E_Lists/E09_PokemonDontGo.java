@@ -34,7 +34,6 @@ public class E09_PokemonDontGo {
             •	The input data will consist ONLY of valid integers in the range [-2.147.483.648, 2.147.483.647].*/
 
         Scanner scanner = new Scanner(System.in);
-
         List<Integer> pokemons = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         int capturedValue = 0;
 

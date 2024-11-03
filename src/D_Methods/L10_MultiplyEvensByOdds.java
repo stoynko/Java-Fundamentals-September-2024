@@ -6,7 +6,7 @@ public class L10_MultiplyEvensByOdds {
 
     public static void main(String[] args) {
 
-        //Create a program that reads an integer number and multiplies the sum of all its even digits by the sum of all its odd digits.
+        /*Create a program that reads an integer number and multiplies the sum of all its even digits by the sum of all its odd digits*/
 
         Scanner scanner = new Scanner(System.in);
         int input = Math.abs(Integer.parseInt(scanner.nextLine()));

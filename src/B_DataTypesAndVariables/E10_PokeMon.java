@@ -34,7 +34,6 @@ public class E10_PokeMon {
             •	Allowed time / memory: 16 MB / 100ms.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int pokePower = Integer.parseInt(scanner.nextLine());
         double percentageComparator = pokePower * 0.5;
         int distance = Integer.parseInt(scanner.nextLine());
@@ -42,10 +41,8 @@ public class E10_PokeMon {
         int pokeCounter = 0;
 
         while (pokePower >= distance) {
-
             pokePower = pokePower - distance;
             pokeCounter++;
-
             if (pokePower == percentageComparator && exhaustionFactor != 0) {
                 pokePower /= exhaustionFactor;
             }

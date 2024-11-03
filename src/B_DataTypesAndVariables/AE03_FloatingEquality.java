@@ -12,9 +12,9 @@ public class AE03_FloatingEquality {
         You will receive two lines, each containing a floating-point number. Your task is to compare the values of the two numbers.*/
 
         Scanner scanner = new Scanner(System.in);
-
         double numberA = Double.parseDouble(scanner.nextLine());
         double numberB = Double.parseDouble(scanner.nextLine());
+
         boolean isEqual = false;
         double eps = 0.000001;
         double difference = 0;

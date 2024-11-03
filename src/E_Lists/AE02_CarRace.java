@@ -20,7 +20,6 @@ public class AE02_CarRace {
         Print the result in the following format "The winner is {left/right} with total time: {total time}", formatted with one digit after the decimal point.*/
 
         Scanner scanner = new Scanner(System.in);
-
         List<Integer> raceTimes = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         int indexFinishLine = raceTimes.size() / 2;
         List<Integer> driverA = raceTimes.subList(0, indexFinishLine);

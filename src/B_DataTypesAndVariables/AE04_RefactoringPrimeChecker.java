@@ -10,7 +10,6 @@ public class AE04_RefactoringPrimeChecker {
         The code, however, is not very well written. Your job is to modify it in a way that is easy to read and understand.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int n = Integer.parseInt(scanner.nextLine());
 
         for (int i = 2; i <= n; i++) {
@@ -23,6 +22,7 @@ public class AE04_RefactoringPrimeChecker {
                     break;
                 }
             }
+
             System.out.printf("%d -> %b%n", i, isPrime);
         }
     }

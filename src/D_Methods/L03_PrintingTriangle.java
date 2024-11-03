@@ -6,7 +6,7 @@ public class L03_PrintingTriangle {
 
     public static void main(String[] args) {
 
-        //Create a method for printing triangles.
+        /*Create a method for printing triangles*/
 
         Scanner scanner = new Scanner(System.in);
 

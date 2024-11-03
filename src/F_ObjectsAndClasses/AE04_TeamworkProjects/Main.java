@@ -1,8 +1,8 @@
-package F_ObjectsAndClasses.AE01_CompanyRoster;
+package F_ObjectsAndClasses.AE04_TeamworkProjects;
 
 import java.util.Scanner;
 
-public class AE01_CompanyRoster {
+public class Main {
 
     public static void main(String[] args) {
 

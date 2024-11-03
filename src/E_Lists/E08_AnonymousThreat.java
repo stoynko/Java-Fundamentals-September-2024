@@ -50,8 +50,8 @@ public class E08_AnonymousThreat {
         List<String> list = Arrays.stream(scanner.nextLine().split(" ")).collect(Collectors.toList());
 
         String input = scanner.nextLine();
-        while (!input.equals("3:1")) {
 
+        while (!input.equals("3:1")) {
             String[] actions = input.split(" ");
             String action = actions[0];
 

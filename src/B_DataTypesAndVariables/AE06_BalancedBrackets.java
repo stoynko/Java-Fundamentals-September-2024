@@ -24,8 +24,8 @@ public class AE06_BalancedBrackets {
             •	The length of the stings will be between [1…100] characters.*/
 
         Scanner scanner = new Scanner(System.in);
-
         byte rowCount = Byte.parseByte(scanner.nextLine());
+
         byte openingCounter = 0;
         boolean isBalanced = true;
 

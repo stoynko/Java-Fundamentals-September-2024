@@ -17,7 +17,6 @@ public class E05_BombNumbers {
 
         List<Integer> integersList = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         int[] specialSequence = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-
         int bombNumber = specialSequence[0];
         int bombPower = specialSequence[1];
 

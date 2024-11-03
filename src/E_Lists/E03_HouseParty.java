@@ -21,12 +21,10 @@ public class E03_HouseParty {
         If not, print: "{name} is not in the list!". In the end, print all guests.*/
 
         Scanner scanner = new Scanner(System.in);
-
         int n = Integer.parseInt(scanner.nextLine());
         List<String> guests = new ArrayList<>();
 
         for (int count = 0; count < n; count++) {
-
             String input = scanner.nextLine();
             List<String> elements = List.of(input.split(" "));
             String guestName = elements.get(0);

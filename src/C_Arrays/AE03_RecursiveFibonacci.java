@@ -26,6 +26,7 @@ public class AE03_RecursiveFibonacci {
         for (int index = 2; index <= sequence.length - 1; index++) {
             sequence[index] = sequence[index - 1] + sequence[index - 2];
         }
+
         System.out.println(sequence[target - 1]);
     }
 }

@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class L03_OddOccurrences {
 
@@ -11,7 +11,21 @@ public class L03_OddOccurrences {
             •	Print the result elements in lowercase in their order of appearance.*/
 
         Scanner scanner = new Scanner(System.in);
+        String[] input = Arrays.stream(scanner.nextLine().split("\\s+")).map(String::toLowerCase).toArray(String[]::new);
+        Map<String, Integer> map = new LinkedHashMap<>();
 
+        for (String word : input) {
+            map.putIfAbsent(word, 0);
+            map.put(word, map.get(word) + 1);
+        }
 
+        List<String> output = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() % 2 == 1) {
+                output.add(entry.getKey());
+            }
+        }
+
+        System.out.printf("%s", String.join(", ", output));
     }
 }

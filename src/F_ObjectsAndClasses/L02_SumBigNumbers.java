@@ -7,7 +7,7 @@ public class L02_SumBigNumbers {
 
     public static void main(String[] args) {
 
-        //You will receive two numbers (0 to 1050), and print their sum
+        /*You will receive two numbers (0 to 1050), and print their sum.*/
 
         Scanner scanner = new Scanner(System.in);
 

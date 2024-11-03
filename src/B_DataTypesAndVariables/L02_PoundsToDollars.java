@@ -12,9 +12,10 @@ public class L02_PoundsToDollars {
             •	Print the resulted dollars, formatted to the third decimal point*/
 
         Scanner scanner = new Scanner(System.in);
-
         float inputGBP = Float.parseFloat(scanner.nextLine());
+
         float outputUSD = inputGBP * 1.36f;
+
         System.out.printf("%.3f", outputUSD);
     }
 }

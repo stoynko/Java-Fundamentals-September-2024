@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class L09_CenturiesToMinutes {
 
     public static void main(String[] args) {
-
         /*Write a program to enter an integer number of centuries and convert it to years, days, hours, and minutes.
         Example: 1 century = 100 years = 36524 days = 876581 hours = 52594877 minutes*/
 

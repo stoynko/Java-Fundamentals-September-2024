@@ -36,8 +36,8 @@ public class AE05_DrumSet {
         List<Integer> initialQuality = Arrays.stream(scanner.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
         List<Integer> newQuality = new ArrayList<>(initialQuality);
         String input = scanner.nextLine();
-        while (!input.equals("Hit it again, Gabsy!")) {
 
+        while (!input.equals("Hit it again, Gabsy!")) {
             int hitPower = Integer.parseInt(input);
             for (int index = 0; index <= newQuality.size() - 1; index++) {
                 newQuality.set(index, newQuality.get(index) - hitPower);

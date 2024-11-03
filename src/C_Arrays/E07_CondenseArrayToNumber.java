@@ -15,7 +15,6 @@ public class E07_CondenseArrayToNumber {
 
         int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         while (numbers.length != 1) {
-
             int[] condensed = new int[numbers.length - 1];
 
             for (int index = 0; index <= condensed.length - 1; index++) {

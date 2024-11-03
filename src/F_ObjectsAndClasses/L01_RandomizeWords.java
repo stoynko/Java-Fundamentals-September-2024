@@ -10,7 +10,7 @@ public class L01_RandomizeWords {
 
     public static void main(String[] args) {
 
-        //You are given a list of words in one line. Randomize their order and print each word on a separate line.
+        /*You are given a list of words in one line. Randomize their order and print each word on a separate line.*/
 
         Scanner scanner = new Scanner(System.in);
         Random randomNumber = new Random();

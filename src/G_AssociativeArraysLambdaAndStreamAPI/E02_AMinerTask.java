@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E02_AMinerTask {
 
@@ -13,7 +13,20 @@ public class E02_AMinerTask {
         The quantities inputs will be in the range [1 … 2 000 000 000].*/
 
         Scanner scanner = new Scanner(System.in);
+        Map<String, Integer> resourceList = new LinkedHashMap<>();
+        String input = scanner.nextLine();
 
-
+        while (!input.equals("stop")) {
+            int quantity = Integer.parseInt(scanner.nextLine());
+            if (!resourceList.containsKey(input)) {
+                resourceList.put(input, quantity);
+            } else {
+                resourceList.put(input, resourceList.get(input) + quantity);
+            }
+            input = scanner.nextLine();
+        }
+        for (Map.Entry<String, Integer> entry : resourceList.entrySet()) {
+            System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
+        }
     }
 }

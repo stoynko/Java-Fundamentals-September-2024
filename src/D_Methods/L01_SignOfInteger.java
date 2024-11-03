@@ -6,7 +6,7 @@ public class L01_SignOfInteger {
 
     public static void main(String[] args) {
 
-        //Create a method that prints the sign of an integer number.
+        /*Create a method that prints the sign of an integer number*/
 
         Scanner scanner = new Scanner(System.in);
         int number = Integer.parseInt(scanner.nextLine());
