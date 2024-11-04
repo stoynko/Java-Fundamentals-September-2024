@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E08_CompanyUsers {
 
@@ -20,6 +20,33 @@ public class E08_CompanyUsers {
 
         Scanner scanner = new Scanner(System.in);
 
-        
+        Map<String, List<String>> employeesMap = new LinkedHashMap<>();
+        String input = scanner.nextLine();
+
+        while (!input.equals("End")) {
+
+            String[] data = input.split(" -> ");
+            String companyName = data[0];
+            String employeeID = data[1];
+
+            if (!employeesMap.containsKey(companyName)) {
+                employeesMap.put(companyName, new ArrayList<>());
+                employeesMap.get(companyName).add(employeeID);
+            } else {
+                if (employeesMap.get(companyName).contains(employeeID)) {
+                    input = scanner.nextLine();
+                    continue;
+                } else {
+                    employeesMap.get(companyName).add(employeeID);
+                }
+            }
+            input = scanner.nextLine();
+        }
+        employeesMap.forEach((company, employees) -> {
+            System.out.println(company);
+            for (String employeesID : employees) {
+                System.out.printf("-- %s%n", employeesID);
+            }
+        });
     }
 }

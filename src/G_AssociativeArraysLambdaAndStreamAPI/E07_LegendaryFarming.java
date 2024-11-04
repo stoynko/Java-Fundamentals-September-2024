@@ -15,9 +15,11 @@ public class E07_LegendaryFarming {
             •	"Dragonwrath" - requires 250 Motes
 
         "Shards", "Fragments", and "Motes" are the key materials (case-insensitive), and everything else is junk. You will be given lines of input in the format:
-        "{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}"
+        "{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}" / 3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards
 
-        Keep track of the key materials - the first one that reaches 250, wins the race. At that point, you have to print that the corresponding legendary item is obtained.
+
+        Keep track of the key materials - the first one that reaches 250, wins the race.
+        At that point, you have to print that the corresponding legendary item is obtained.
         In the end, print the remaining shards, fragments, and motes in the format:
 
         "shards: {numberOfShards}
@@ -36,20 +38,49 @@ public class E07_LegendaryFarming {
             •	The output should be lowercase, except for the first letter of the legendary.*/
 
         Scanner scanner = new Scanner(System.in);
+        Map<String, Integer> materials = new LinkedHashMap<>();
+        materials.put("shards", 0);
+        materials.put("fragments", 0);
+        materials.put("motes", 0);
+        Map<String, Integer> junk = new LinkedHashMap<>();
+        boolean foundLegendaryItem = false;
 
-        String[] input = scanner.nextLine().split("\\s+");
-        List<Integer> quantity = new ArrayList<>();
-        List<String> items = new ArrayList<>();
+        while (!foundLegendaryItem) {
 
-        for (int index = 0; index < input.length - 1; index++) {
-            if (index % 2 == 0) {
-                quantity.add(Integer.parseInt(input[index]));
-            } else {
-                items.add(input[index]);
+            List<String> inputData = Arrays.stream(scanner.nextLine().toLowerCase().split("\\s+")).collect(Collectors.toList());
+
+            while (!inputData.isEmpty()) {
+
+                String currentMaterial = inputData.get(1);
+                int quantity = Integer.parseInt(inputData.get(0));
+                inputData.remove(0);
+                inputData.remove(0);
+                if (currentMaterial.equals("shards") || currentMaterial.equals("fragments") || currentMaterial.equals("motes")) {
+                    int currentQuantity = materials.get(currentMaterial);
+                    materials.put(currentMaterial, currentQuantity + quantity);
+
+                    if (materials.get(currentMaterial) >= 250) {
+                        foundLegendaryItem = true;
+                        String legendaryItem = "";
+                        switch (currentMaterial) {
+                            case "shards" -> legendaryItem = "Shadowmourne";
+                            case "fragments" -> legendaryItem = "Valanyr";
+                            case "motes" -> legendaryItem = "Dragonwrath";
+                        }
+                        System.out.printf("%s obtained!%n", legendaryItem);
+                        materials.put(currentMaterial, materials.get(currentMaterial) - 250);
+                        break;
+                    }
+                } else {
+                    if (junk.containsKey(currentMaterial)) {
+                        junk.put(currentMaterial, junk.get(currentMaterial) + quantity);
+                    } else {
+                        junk.put(currentMaterial, quantity);
+                    }
+                }
             }
         }
-
-        System.out.println(quantity.toString());
-        System.out.println(items.toString());
+        materials.forEach((material, quantity) -> System.out.printf("%s: %d%n", material, quantity));
+        junk.forEach((material, quantity) -> System.out.printf("%s: %d%n", material, quantity));
     }
 }
