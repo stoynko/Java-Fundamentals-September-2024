@@ -40,48 +40,49 @@ public class E09_ForceBook {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        Map <String, List<String>> teams = new LinkedHashMap<>();
+        Map<String, List<String>> sides = new LinkedHashMap<>();
         while (!input.equals("Lumpawaroo")) {
 
             if (input.contains("|")) {
 
-            /*• If there is no such force user and no such force side -> create a new force side and add the force user to the corresponding side.
-              • Only if there is no such force user on any force side -> add the force user to the corresponding side.
-              • If there is such force user already -> skip the command and continue to the next operation.*/
+                String forceSide = input.split("\\|")[0];
+                String forceUser = input.split("\\|")[1];
 
-                String[] inputData = input.split("\\|");
-                String side = inputData[0];
-                String user = inputData[1];
-
-                teams.forEach((currentSide, currentUser) -> {
-
-                });
-                if (!teams.containsKey(team) && !teams.get(team).contains(player)){
-                    teams.put(team, new ArrayList<>());
-                    teams.get(team).add(player);
-                } else if ()
-
-
-
-
-
-
-
-
-
-
+                if (!sides.containsKey(forceSide)) {
+                    sides.put(forceSide, new ArrayList<>());
+                    if (isUserRegistered(sides, forceUser)) {
+                        continue;
+                    } else {
+                        sides.get(forceSide).add(forceUser);
+                    }
+                }
 
 
             } else if (input.contains("->")) {
-                String[] inputData = input.split("\\|");
-                String player = inputData[0];
-                String team = inputData[1];
 
+                String forceUser = input.split(" -> ")[0];
+                String forceSide = input.split(" -> ")[1];
+
+                sides.forEach((side, users) -> users.remove(forceUser));
+                if (sides.containsKey(forceSide)) {
+                    sides.get(forceSide).add(forceUser);
+                } else {
+                    sides.put(forceSide, new ArrayList<>());
+                    sides.get(forceSide).add(forceUser);
+                }
+                System.out.printf("%s joins the %s side!%n", forceUser, forceSide);
             }
-
-
             input = scanner.nextLine();
         }
 
+    }
+
+    private static boolean isUserRegistered(Map<String, List<String>> sides, String forceUser) {
+        for (Map.Entry<String, List<String>> entry : sides.entrySet()) {
+            if (entry.getValue().contains(forceUser)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
