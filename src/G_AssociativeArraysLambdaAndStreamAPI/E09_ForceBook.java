@@ -45,25 +45,33 @@ public class E09_ForceBook {
 
             if (input.contains("|")) {
 
-                String forceSide = input.split("\\|")[0];
-                String forceUser = input.split("\\|")[1];
+                String forceSide = input.split("\\| ")[0].trim();
+                String forceUser = input.split("\\|")[1].trim();
+                boolean isUserRegistered = false;
 
                 if (!sides.containsKey(forceSide)) {
                     sides.put(forceSide, new ArrayList<>());
-                    if (isUserRegistered(sides, forceUser)) {
-                        continue;
-                    } else {
-                        sides.get(forceSide).add(forceUser);
+                }
+
+                for (Map.Entry<String, List<String>> entry : sides.entrySet()) {
+                    if (entry.getValue().contains(forceUser)) {
+                        isUserRegistered = true;
                     }
                 }
 
+                if (!isUserRegistered) {
+                    sides.get(forceSide).add(forceUser);
+                }
 
             } else if (input.contains("->")) {
 
-                String forceUser = input.split(" -> ")[0];
-                String forceSide = input.split(" -> ")[1];
+                String forceUser = input.split(" -> ")[0].trim();
+                String forceSide = input.split(" -> ")[1].trim();
 
-                sides.forEach((side, users) -> users.remove(forceUser));
+                for (Map.Entry<String, List<String>> entry : sides.entrySet()) {
+                    entry.getValue().remove(forceUser);
+                }
+
                 if (sides.containsKey(forceSide)) {
                     sides.get(forceSide).add(forceUser);
                 } else {
@@ -75,14 +83,14 @@ public class E09_ForceBook {
             input = scanner.nextLine();
         }
 
-    }
-
-    private static boolean isUserRegistered(Map<String, List<String>> sides, String forceUser) {
         for (Map.Entry<String, List<String>> entry : sides.entrySet()) {
-            if (entry.getValue().contains(forceUser)) {
-                return true;
+            String forceSide = entry.getKey();
+            List<String> forceUsers = entry.getValue();
+
+            if (!forceUsers.isEmpty()) {
+                System.out.printf("Side: %s, Members: %d%n", forceSide, forceUsers.size());
+                forceUsers.forEach(forceUser -> System.out.printf("! %s%n", forceUser));
             }
         }
-        return false;
     }
 }

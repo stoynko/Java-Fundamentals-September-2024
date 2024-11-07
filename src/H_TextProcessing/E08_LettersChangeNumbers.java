@@ -38,7 +38,32 @@ public class E08_LettersChangeNumbers {
             •	Time limit: 0.3 sec. Memory limit: 16MB.*/
 
         Scanner scanner = new Scanner(System.in);
+        String[] input = scanner.nextLine().split("\\s+");
+        double sum = 0;
 
+        for (String code : input) { //12/1=12, 12+2=14, 17*19=323, 323–7=316, 14+316=330
 
+            char firstLetter = code.charAt(0);
+            char lastLetter = code.charAt(code.length() - 1);
+            double number = Double.parseDouble(code.replace(firstLetter, ' ').replace(lastLetter, ' ').trim());
+
+            if (Character.isUpperCase(firstLetter)) {
+                int position = (int) firstLetter - 64;
+                number /= position;
+            } else if (Character.isLowerCase(firstLetter)) {
+                int position = (int) firstLetter - 96;
+                number *= position;
+            }
+
+            if (Character.isUpperCase(lastLetter)) {
+                int position = (int) lastLetter - 64;
+                number -= position;
+            } else if (Character.isLowerCase(lastLetter)) {
+                int position = (int) lastLetter - 96;
+                number += position;
+            }
+            sum += number;
+        }
+        System.out.printf("%.2f", sum);
     }
 }

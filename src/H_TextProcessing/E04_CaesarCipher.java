@@ -11,7 +11,14 @@ public class E04_CaesarCipher {
         For example, A would be replaced by D, B would become E, and so on. Print the encrypted text.*/
 
         Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        StringBuilder encryptedText = new StringBuilder();
 
-        
+        for (char currentChar : text.toCharArray()) {
+            char encryptedChar = (char) (currentChar + 3);
+            encryptedText.append(encryptedChar);
+        }
+        System.out.println(encryptedText);
+
     }
 }

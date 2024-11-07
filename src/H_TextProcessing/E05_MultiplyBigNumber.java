@@ -2,7 +2,7 @@ package H_TextProcessing;
 
 import java.util.*;
 
-public class E05_MultiplyBigNumbeer {
+public class E05_MultiplyBigNumber {
 
     public static void main(String[] args) {
 
