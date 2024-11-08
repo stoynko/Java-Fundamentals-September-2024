@@ -1,6 +1,6 @@
 package G_AssociativeArraysLambdaAndStreamAPI;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class E10_SoftUniExamResults {
 
@@ -35,7 +35,48 @@ public class E10_SoftUniExamResults {
             •	Allowed working time / memory: 100ms / 16MB.*/
 
         Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        HashMap<String, Integer> studentSubmissions = new LinkedHashMap<>();
+        HashMap<String, Integer> languageSubmissions = new LinkedHashMap<>();
 
+        while (!input.equals("exam finished")) {
 
+            List<String> data = new ArrayList<>(Arrays.stream(input.split("-")).toList());
+
+            if (data.contains("banned")) {
+                String username = data.get(0);
+                for (HashMap.Entry<String, Integer> entry : studentSubmissions.entrySet()) {
+                    if (entry.getKey().equals(username)) {
+                        studentSubmissions.remove(entry.getKey());
+                    }
+                }
+            } else {
+                String username = data.get(0);
+                String language = data.get(1);
+                int points = Integer.parseInt(data.get(2));
+                if (!studentSubmissions.containsKey(username)) {
+                    studentSubmissions.put(username, points);
+                } else {
+                    if (points > studentSubmissions.get(username)) {
+                        studentSubmissions.put(username, points);
+                    }
+                }
+                if (!languageSubmissions.containsKey(language)) {
+                    languageSubmissions.put(language, 1);
+                } else {
+                    languageSubmissions.put(language, languageSubmissions.get(language) + 1);
+                }
+            }
+            input = scanner.nextLine();
+        }
+
+        System.out.println("Results:");
+        for (HashMap.Entry<String, Integer> entry : studentSubmissions.entrySet()) {
+            System.out.printf("%s | %d%n", entry.getKey(), entry.getValue());
+        }
+        System.out.println("Submissions:");
+        for (HashMap.Entry<String, Integer> entry : languageSubmissions.entrySet()) {
+            System.out.printf("%s - %d%n", entry.getKey(), entry.getValue());
+        }
     }
 }

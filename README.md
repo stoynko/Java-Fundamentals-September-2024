@@ -12,7 +12,7 @@ Types and Variables</a></h3>
 <h3>6.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/X_MidExam"> Mid Exam</a></h3>
 <h3>7.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/F_ObjectsAndClasses"> Objects and Classes</a></h3>
 <h3>8.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/G_AssociativeArraysLambdaAndStreamAPI"> Associative Arrays, Lambda and Stream API</a></h3>
-<h3>9.<a href=""> Text Processing</a></h3>
+<h3>9.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/H_TextProcessing"> Text Processing</a></h3>
 <h3>10.<a href=""> Regular Expressions</a></h3>
 <h3>11.<a href=""> Final Exam</a></h3>
 

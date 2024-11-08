@@ -24,7 +24,29 @@ public class E07_StringExplosion {
             •	The strength of the punches will be in the interval [0…9].*/
 
         Scanner scanner = new Scanner(System.in);
+        StringBuilder text = new StringBuilder(scanner.nextLine());
 
+        for (int currentIndex = 0; currentIndex < text.length() - 1; currentIndex++) {
 
+            if (text.charAt(currentIndex) == '>') {
+                int explosionIndex = currentIndex + 1;
+                int explosionRange = Integer.parseInt(String.valueOf(text.charAt(explosionIndex)));
+
+                while (explosionRange != 0 && explosionIndex <= text.length() - 1) {
+
+                    if (text.charAt(explosionIndex) == '>') {
+                        int additionalPower = Integer.parseInt(String.valueOf(text.charAt(explosionIndex + 1)));
+                        explosionRange += additionalPower;
+                        explosionIndex++;
+                        currentIndex++;
+                        continue;
+                    } else {
+                        text.deleteCharAt(explosionIndex);
+                    }
+                    explosionRange--;
+                }
+            }
+        }
+        System.out.println(text);
     }
 }
