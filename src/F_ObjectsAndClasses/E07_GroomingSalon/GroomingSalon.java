@@ -5,7 +5,7 @@ import java.util.*;
 public class GroomingSalon {
 
     private int capacity;
-    private List<Pet> petsData;
+    private List<Pet> petsData = new ArrayList<>(capacity);
 
     public int getCapacity() {
         return capacity;
@@ -20,8 +20,8 @@ public class GroomingSalon {
     }
 
     public void add(Pet pet) {
-        if (this.petsData.size() < this.capacity) {
-            this.petsData.add(pet);
+        if (this.petsData.size() < capacity) {
+            petsData.add(pet);
         }
     }
 
@@ -35,12 +35,26 @@ public class GroomingSalon {
         return false;
     }
 
-    public Pet get(String bella, String mia) {
+    public Pet getPet(String name, String owner) {
+        for (Pet pet : this.petsData) {
+            if (pet.getName().equals(name) && pet.getOwner().equals(owner)) {
+                return pet;
+            }
+        }
+        return null;
     }
 
-    public boolean getCount() {
+    public int getCount() {
+        return this.petsData.size();
     }
 
-    public boolean getStatistics() {
+    public String getStatistics() {
+        StringBuilder output = new StringBuilder();
+        output.append("The grooming salon has the following clients:").append(System.lineSeparator());
+        for (Pet pet : this.petsData) {
+            output.append(pet.getName()).append(" ").append(pet.getOwner());
+            output.append(System.lineSeparator());
+        }
+        return output.toString();
     }
 }

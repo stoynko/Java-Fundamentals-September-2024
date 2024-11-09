@@ -1,7 +1,5 @@
 package F_ObjectsAndClasses.E07_GroomingSalon;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -31,12 +29,10 @@ public class Main {
             •	The combinations of names and owners will always be unique.
             •	The age of the pets will always be positive.*/
 
-        Scanner scanner = new Scanner(System.in);
-
         GroomingSalon salon = new GroomingSalon(20);
         Pet dog = new Pet("Ellias", 5, "Tim");
         System.out.println(dog); // Ellias 5 - (Tim)
-        GroomingSalon.add(dog);
+        salon.add(dog);
         System.out.println(salon.remove("Ellias")); // true
         System.out.println(salon.remove("Pufa")); // false
         Pet cat = new Pet("Bella", 2, "Mia");
@@ -44,7 +40,7 @@ public class Main {
         salon.add(cat);
         salon.add(bunny);
 
-        Pet pet = salon.get("Bella", "Mia");
+        Pet pet = salon.getPet("Bella", "Mia");
         System.out.println(pet); // Bella 2 - (Mia)
         System.out.println(salon.getCount()); // 2
         System.out.println(salon.getStatistics());
