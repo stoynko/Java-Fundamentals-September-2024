@@ -39,54 +39,55 @@ public class AE01_Ranking {
     •	The second input is always valid.*/
 
         Scanner scanner = new Scanner(System.in);
-
-        HashMap<String, String> passwordMap = new LinkedHashMap<>();
-        HashMap<String, List<String>> contestMap = new LinkedHashMap<>();
-        HashMap<String, List<Integer>> resultsMap = new LinkedHashMap<>();
+        Map<String, String> passwordMap = new HashMap<>();
+        TreeMap<String, Map<String, Integer>> usersResults = new TreeMap<>();
         String input = scanner.nextLine();
 
-
         while (!input.equals("end of contests")) {
-
-            /*Input:
-            •	Strings in format "{contest}:{password for contest}" until the "end of contests" command. There will be no case with two equal contests.
-            •	Strings in format "{contest}=>{password}=>{username}=>{points}" until the "end of submissions" command.
-            •	There will be no case with 2 or more users with the same total points!*/
-            String contest = input.split(":")[0];
+            String contestName = input.split(":")[0];
             String password = input.split(":")[1];
-            passwordMap.putIfAbsent(contest, password);
+            passwordMap.putIfAbsent(contestName, password);
             input = scanner.nextLine();
         }
+
         input = scanner.nextLine();
+
         while (!input.equals("end of submissions")) {
+            String[] data = input.split("=>");
+            String contestName = data[0];
+            String password = data[1];
+            String username = data[2];
+            int points = Integer.parseInt(data[3]);
 
-            String contest = input.split("=>")[0];
-            String password = input.split("=>")[1];
-            String username = input.split("=>")[2];
-            int points = Integer.parseInt(input.split("=>")[3]);
-
-            // Регистрирам кой къде е участвал
-
-            for (Map.Entry<String, String> entry : passwordMap.entrySet()) {
-                if (entry.getKey().equals(contest) && entry.getValue().equals(password)) {
-                    contestMap.putIfAbsent(username, new ArrayList<>());
-                    contestMap.get(username).add(contest);
-                    resultsMap.putIfAbsent(username, new ArrayList<>());
-                    break;
+            if (passwordMap.containsKey(contestName) && passwordMap.get(contestName).equals(password)) {
+                usersResults.putIfAbsent(username, new TreeMap<>());
+                Map<String, Integer> contests = usersResults.get(username);
+                if (contests.containsKey(contestName)) {
+                    contests.put(contestName, Math.max(contests.get(contestName), points));
+                } else {
+                    contests.put(contestName, points);
                 }
-            }
-            for (int index = 0; index < contestMap.size(); index++) {
 
-                if (resultsMap.get(username).isEmpty() || contestMap.get(username).size() > resultsMap.get(username).size()) {
-                    if (contestMap.get(username).get(index).equals(contest) && !resultsMap.get(username).isEmpty()) {
-                        resultsMap.get(username).set(index, points);
-                    } else {
-                        resultsMap.get(username).add(points);
-                    }
-                }
-                input = scanner.nextLine();
             }
-
+            input = scanner.nextLine();
         }
+
+        int maxPoints = 0;
+        String bestCandidate = null;
+        for (Map.Entry<String, Map<String, Integer>> entry : usersResults.entrySet()) {
+            String username = entry.getKey();
+            int totalPoints = entry.getValue().values().stream().mapToInt(Integer::intValue).sum();
+            if (totalPoints > maxPoints) {
+                maxPoints = totalPoints;
+                bestCandidate = entry.getKey();
+            }
+        }
+
+        System.out.printf("Best candidate is %s with total %d points.%n", bestCandidate, maxPoints);
+        System.out.println("Ranking: ");
+        usersResults.forEach((username, results) -> {
+            System.out.printf("%s%n", username);
+            usersResults.get(username).entrySet().stream().sorted((a, b) -> b.getValue().compareTo(a.getValue())).forEach(contest -> System.out.printf("#  %s -> %d%n", contest.getKey(), contest.getValue()));
+        });
     }
 }
