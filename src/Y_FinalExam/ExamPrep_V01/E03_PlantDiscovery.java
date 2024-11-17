@@ -41,13 +41,10 @@ Output:
         for (int currentPlant = 1; currentPlant <= numberOfPlants; currentPlant++) {
             //"{plant}<->{rarity}".
             String[] input = Arrays.stream(scanner.nextLine().split("<->")).toArray(String[]::new);
-            String plantName = input[0];
-            int plantRarity = Integer.parseInt(input[1]);
-            if (!plantsData.containsKey(plantName)) {
-                plantsData.put(plantName, plantRarity);
-            } else {
-                plantsData.replace(plantName, plantRarity);
-            }
+            String plantName = input[0].trim();
+            int plantRarity = Integer.parseInt(input[1].trim());
+            plantsData.put(plantName, plantRarity);
+            plantRatings.putIfAbsent(plantName, new ArrayList<>());
         }
 
         String input = scanner.nextLine();
@@ -56,18 +53,22 @@ Output:
             //"Rate: {plant} - {rating}" – add the given rating to the plant (store all ratings)
             //"Update: {plant} - {new_rarity}" – update the rarity of the plant with the new one
             //"Reset: {plant}" – remove all the ratings of the given plant
-            String command = input.split(":")[0];
-            String plantName = input.split(":")[1].split(" - ")[0];
+            String command = input.split(":")[0].trim();
+            String plantName = input.split(":")[1].split(" - ")[0].trim();
 
+            if (!plantsData.containsKey(plantName)) {
+                System.out.println("error");
+                input = scanner.nextLine();
+                continue;
+            }
             switch (command) {
                 case "Rate" -> {
                     Double newRating = Double.parseDouble(input.split(":")[1].split(" - ")[1]);
-                    plantRatings.putIfAbsent(plantName, new ArrayList<>());
                     plantRatings.get(plantName).add(newRating);
                 }
                 case "Update" -> {
                     int newRarity = Integer.parseInt(input.split(":")[1].split(" - ")[1]);
-                    plantsData.replace(plantName, newRarity);
+                    plantsData.put(plantName, newRarity);
                 }
                 case "Reset" -> {
                     if (plantsData.containsKey(plantName)) {
@@ -88,4 +89,3 @@ Output:
         }
     }
 }
-
