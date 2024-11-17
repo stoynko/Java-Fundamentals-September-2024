@@ -13,8 +13,8 @@ Types and Variables</a></h3>
 <h3>7.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/F_ObjectsAndClasses"> Objects and Classes</a></h3>
 <h3>8.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/G_AssociativeArraysLambdaAndStreamAPI"> Associative Arrays, Lambda and Stream API</a></h3>
 <h3>9.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/H_TextProcessing"> Text Processing</a></h3>
-<h3>10.<a href=""> Regular Expressions</a></h3>
-<h3>11.<a href=""> Final Exam</a></h3>
+<h3>10.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/I_RegularExpressions"> Regular Expressions</a></h3>
+<h3>11.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/tree/main/src/Y_FinalExam"> Final Exam</a></h3>
 
 <h1> Projects</h1>
 <h3>1.<a href="https://github.com/stoynko/Java-Fundamentals-September-2024/blob/main/src/Z_Projects/RockPaperScissors.java"> "Rock - paper - scissors"</a></h3>

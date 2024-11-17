@@ -28,7 +28,6 @@ public class RockPaperScissors {
             } else {
                 System.out.println("Invalid input. Please try again...");
                 playerInput = scanner.nextLine();
-                continue;
             }
         }
 

@@ -12,6 +12,7 @@ public class GuessTheNumber {
         byte computerNumber = (byte) randomNumber.nextInt((100) + 1);
         byte playerInput = 0;
         boolean isFound = false;
+
         while (true) {
             byte counter = 0;
             System.out.println("Guess a number (1-100): ");
