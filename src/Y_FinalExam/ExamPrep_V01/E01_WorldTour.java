@@ -27,28 +27,45 @@ Output:
 
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+        StringBuilder text = new StringBuilder(input);
 
         while (!input.equals("Travel")) {
-            StringBuilder text = new StringBuilder(input);
-            String[] commands = scanner.nextLine().split(":");
+
+            String[] commands = input.split(":");
             String command = commands[0];
+
             switch (command) {
                 case "Add Stop" -> {
                     int index = Integer.parseInt(commands[1]);
                     String travelStop = commands[2];
+                    if (checkIndex(text, index)) {
+                        text.insert(index, travelStop);
+                    }
+                    System.out.println(text);
                 }
                 case "Remove Stop" -> {
                     int startIndex = Integer.parseInt(commands[1]);
-                    int endIndex = Integer.parseInt(commands[2]);
+                    int endIndex = Integer.parseInt(commands[2]) + 1;
+                    if (checkIndex(text, startIndex) && checkIndex(text, endIndex)) {
+                        text.delete(startIndex, endIndex);
+                    }
+                    System.out.println(text);
                 }
                 case "Switch" -> {
                     String oldString = commands[1];
                     String newString = commands[2];
+                    String updatedText = text.toString().replaceAll(oldString, newString);
+                    text.setLength(0);
+                    text.append(updatedText);
+                    System.out.println(text);
                 }
-
             }
-
             input = scanner.nextLine();
         }
+        System.out.printf("Ready for world tour! Planned stops: %s", text);
+    }
+
+    private static boolean checkIndex(StringBuilder text, int index) {
+        return index >= 0 && index <= text.length();
     }
 }
