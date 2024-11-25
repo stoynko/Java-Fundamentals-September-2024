@@ -50,12 +50,9 @@ Output:
         String input = scanner.nextLine();
 
         while (!input.equals("Exhibition")) {
-            //"Rate: {plant} - {rating}" – add the given rating to the plant (store all ratings)
-            //"Update: {plant} - {new_rarity}" – update the rarity of the plant with the new one
-            //"Reset: {plant}" – remove all the ratings of the given plant
+
             String command = input.split(":")[0].trim();
             String plantName = input.split(":")[1].split(" - ")[0].trim();
-
             if (!plantsData.containsKey(plantName)) {
                 System.out.println("error");
                 input = scanner.nextLine();
