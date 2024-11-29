@@ -33,30 +33,28 @@ Output:
         {cool emoji N}"
 Constraints: There will always be at least one digit in the text!*/
 
-
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
-        String regex = "([:|*]{2,2})(?<body>[A-Z][a-z]{2,})\\1";
+        String regex = "(::([A-Z][a-z]{2,})::)|(\\*\\*([A-Z][a-z]{2,})\\*\\*)";
         String regexDigits = "(?<digit>[0-9])";
-        Pattern pattern = Pattern.compile(regex);
+        Pattern patternEmojis = Pattern.compile(regex);
         Pattern patternDigits = Pattern.compile(regexDigits);
-        Matcher matcherEmoji = pattern.matcher(input);
+        Matcher matcherEmoji = patternEmojis.matcher(input);
         Matcher matcherDigits = patternDigits.matcher(input);
         List<String> coolEmojis = new ArrayList<>();
-        long coolThreshold = 1;
+        long coolThreshold = 1L;
         int emojiCounter = 0;
 
         while (matcherDigits.find()) {
             int digit = Integer.parseInt(matcherDigits.group("digit"));
             coolThreshold *= digit;
         }
-        if (coolThreshold < 0) {
-            coolThreshold = 1;
-        }
+
         while (matcherEmoji.find()) {
-            String body = matcherEmoji.group("body");
-            int emojiCoolness = body.chars().sum();
+
+            StringBuilder emoji = new StringBuilder(matcherEmoji.group().replace(":", "").replace("*", ""));
+            int emojiCoolness = emoji.chars().sum();
             if (emojiCoolness > coolThreshold) {
                 coolEmojis.add(matcherEmoji.group());
             }
